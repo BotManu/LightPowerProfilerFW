@@ -35,7 +35,8 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern TX_EVENT_FLAGS_GROUP EventFlag;
+extern TX_QUEUE usb_send_queue;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -52,7 +53,7 @@ extern "C" {
 UINT MX_USBX_Device_Init(VOID *memory_ptr);
 
 /* USER CODE BEGIN EFP */
-
+void MX_USB_Device_Init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

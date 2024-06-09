@@ -22,6 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "app_azure_rtos.h"
+#include "app_light_powerprofiler_demo.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -90,12 +91,13 @@ VOID tx_application_define(VOID *first_unused_memory)
 
     memory_ptr = (VOID *)&tx_app_byte_pool;
 
-    if (App_ThreadX_Init(memory_ptr) != TX_SUCCESS)
+    if (app_light_powerprofiler_demo_start((TX_BYTE_POOL*)memory_ptr) != TX_SUCCESS)
     {
       /* USER CODE BEGIN  App_ThreadX_Init_Error */
 
       /* USER CODE END  App_ThreadX_Init_Error */
     }
+
 
     /* USER CODE BEGIN  App_ThreadX_Init_Success */
 
